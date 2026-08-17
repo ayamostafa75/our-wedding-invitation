@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Mennatallah & Ahmed | Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Italianno&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --cream:#f8efdc;
+  --cream2:#fffaf0;
+  --paper:#eee0c8;
+  --paper2:#ddc9a6;
+
+  --ink:#29241f;
+  --muted:#706556;
+
+  --gold:#9b772d;
+  --gold2:#d2b66b;
+  --gold3:#f1d993;
+
+  --green:#687255;
+  --green2:#929878;
+
+  --brown:#705d45;
+  --white:#fffdf7;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Montserrat,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  overflow-x:hidden;
+}
+
+body.locked{
+  overflow:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.section{
+  position:relative;
+  overflow:hidden;
+  padding:120px 20px;
+}
+
+.inner{
+  width:min(1120px,100%);
+  margin:auto;
+  position:relative;
+  z-index:5;
+}
+
+.kicker{
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:5px;
+  font-size:9px;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+.title{
+  text-align:center;
+  font:400 clamp(58px,8vw,100px)/.82
+  "Cormorant Garamond",serif;
+  color:var(--ink);
+}
+
+.ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:28px auto 52px;
+}
+
+.ornament span{
+  width:95px;
+  height:1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+.ornament span:last-child{
+  transform:scaleX(-1);
+}
+
+.ornament i{
+  width:8px;
+  height:8px;
+  background:var(--gold);
+  transform:rotate(45deg);
+  box-shadow:
+    0 0 12px rgba(210,182,107,.55);
+}
+
+/* =========================================
+   GOLD FRAME
+========================================= */
+
+.frame{
+  position:absolute;
+  inset:17px;
+  border:1px solid rgba(155,119,45,.65);
+  pointer-events:none;
+  z-index:20;
+  box-shadow:
+    inset 0 0 35px rgba(155,119,45,.05);
+}
+
+.frame:before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(155,119,45,.22);
+}
+
+/* =========================================
+   FLORAL DECOR
+========================================= */
+
+.floral{
+  position:absolute;
+  width:330px;
+  height:280px;
+  pointer-events:none;
+  z-index:8;
+}
+
+.floral.tl{
+  left:-20px;
+  top:-10px;
+}
+
+.floral.tr{
+  right:-20px;
+  top:-10px;
+  transform:scaleX(-1);
+}
+
+.floral.bl{
+  left:-20px;
+  bottom:-25px;
+  transform:scaleY(-1);
+}
+
+.floral.br{
+  right:-20px;
+  bottom:-25px;
+  transform:scale(-1);
+}
+
+.stem{
+  position:absolute;
+  width:240px;
+  height:3px;
+  left:15px;
+  top:145px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--green),
+      var(--gold)
+    );
+
+  transform:rotate(-25deg);
+  border-radius:50%;
+}
+
+.leaf{
+  position:absolute;
+  width:75px;
+  height:23px;
+  border-radius:100% 0 100% 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green),
+      #c2c3a7,
+      var(--green2)
+    );
+
+  box-shadow:
+    0 5px 14px rgba(69,65,45,.12);
+
+  opacity:.95;
+}
+
+.l1{
+  left:63px;
+  top:122px;
+  transform:rotate(-22deg);
+}
+
+.l2{
+  left:130px;
+  top:90px;
+  transform:rotate(31deg);
+}
+
+.l3{
+  left:170px;
+  top:145px;
+  transform:rotate(-12deg);
+}
+
+/* flowers */
+
+.flower{
+  position:absolute;
+  width:88px;
+  height:88px;
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #b89b52 0 6%,
+      transparent 7%
+    ),
+
+    radial-gradient(
+      ellipse at 50% 12%,
+      #fffef9 0 25%,
+      transparent 26%
+    ),
+
+    radial-gradient(
+      ellipse at 86% 38%,
+      #f7f3e8 0 25%,
+      transparent 26%
+    ),
+
+    radial-gradient(
+      ellipse at 68% 87%,
+      #fffef9 0 25%,
+      transparent 26%
+    ),
+
+    radial-gradient(
+      ellipse at 25% 83%,
+      #eee6d5 0 25%,
+      transparent 26%
+    ),
+
+    radial-gradient(
+      ellipse at 12% 38%,
+      #fffef9 0 25%,
+      transparent 26%
+    );
+
+  filter:
+    drop-shadow(0 10px 16px rgba(74,61,43,.18));
+}
+
+.flower.f1{
+  left:18px;
+  top:20px;
+}
+
+.flower.f2{
+  left:98px;
+  top:2px;
+  transform:scale(.72);
+}
+
+.flower.f3{
+  left:170px;
+  top:58px;
+  transform:scale(.52);
+}
+
+.flower.f4{
+  left:213px;
+  top:5px;
+  transform:scale(.34);
+}
+
+.baby-bloom{
+  position:absolute;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,#b8a77a 0 9%,transparent 10%),
+    radial-gradient(ellipse at 50% 12%,#fffdf7 0 27%,transparent 28%),
+    radial-gradient(ellipse at 87% 50%,#f1ecdf 0 27%,transparent 28%),
+    radial-gradient(ellipse at 50% 88%,#fffdf7 0 27%,transparent 28%),
+    radial-gradient(ellipse at 13% 50%,#eee7d8 0 27%,transparent 28%);
+}
+
+.b1{
+  left:250px;
+  top:110px;
+}
+
+/* =========================================
+   OPENING
+========================================= */
+
+.opening{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255,255,255,.85),
+      transparent 24%
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(210,182,107,.25),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(148,157,122,.22),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #e8d6b5,
+      #fff8e8
+    );
+
+  transition:1s ease;
+}
+
+.opening.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.open-card{
+  width:min(690px,90vw);
+  min-height:min(760px,88vh);
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  border:1px solid var(--gold);
+
+  background:
+
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.9),
+      transparent 48%
+    ),
+
+    rgba(255,250,241,.82);
+
+  box-shadow:
+    0 35px 100px rgba(85,63,54,.2),
+    0 0 60px rgba(196,161,82,.12);
+}
+
+.open-card:before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:1px solid rgba(168,137,69,.35);
+}
+
+.open-card:after{
+  content:"";
+  position:absolute;
+  inset:28px;
+  border:1px solid rgba(168,137,69,.16);
+}
+
+.open-content{
+  position:relative;
+  z-index:3;
+}
+
+.open-kicker{
+  font-size:9px;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:30px;
+}
+
+.open-name{
+  font:400 clamp(80px,14vw,145px)/.62
+  Italianno,cursive;
+
+  color:var(--ink);
+
+  text-shadow:
+    0 5px 25px rgba(155,119,45,.12);
+}
+
+.open-amp{
+  font:400 40px
+  "Cormorant Garamond",serif;
+
+  color:var(--gold);
+  margin:37px 0;
+}
+
+.open-date{
+  margin:42px 0;
+  font-size:8px;
+  letter-spacing:5px;
+  color:var(--muted);
+}
+
+.open-btn{
+  padding:17px 36px;
+
+  border:1px solid var(--gold);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.2),
+      rgba(155,119,45,.18)
+    );
+
+  color:var(--brown);
+
+  letter-spacing:4px;
+  font-size:8px;
+  text-transform:uppercase;
+
+  cursor:pointer;
+
+  transition:.35s;
+
+  box-shadow:
+    0 8px 25px rgba(155,119,45,.12);
+}
+
+.open-btn:hover{
+  background:var(--gold);
+  color:#fff;
+  box-shadow:
+    0 10px 35px rgba(155,119,45,.25);
+}
+
+/* =========================================
+   COVER
+========================================= */
+
+.cover{
+  min-height:100svh;
+
+  padding:70px 20px 100px;
+
+  display:flex;
+  align-items:center;
+
+  background:
+
+    radial-gradient(
+      ellipse at 8% 10%,
+      rgba(205,191,161,.35),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      ellipse at 92% 86%,
+      rgba(185,177,148,.28),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,.85),
+      transparent 42%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf0 0%,
+      #ead7b5 48%,
+      #fbf5e8 100%
+    );
+}
+
+.cover-card{
+  width:min(900px,100%);
+  min-height:790px;
+
+  margin:auto;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:105px 45px 100px;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.9),
+      transparent 50%
+    ),
+
+    rgba(255,250,240,.76);
+
+  border:1px solid var(--gold);
+
+  box-shadow:
+    0 25px 70px rgba(91,67,61,.12),
+    0 0 70px rgba(180,145,70,.08);
+}
+
+.cover-card:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border:1px solid rgba(168,137,69,.32);
+}
+
+.cover-card:after{
+  content:"";
+  position:absolute;
+  inset:27px;
+
+  border:1px solid rgba(126,107,47,.18);
+
+  border-radius:
+    480px 480px 0 0;
+
+  pointer-events:none;
+}
+
+/* arch */
+
+.arch{
+  position:absolute;
+
+  left:7%;
+  right:7%;
+  top:8%;
+  bottom:7%;
+
+  border:1px solid var(--gold);
+  border-bottom:0;
+
+  border-radius:
+    480px 480px 0 0;
+
+  pointer-events:none;
+}
+
+.arch:after{
+  content:"";
+
+  position:absolute;
+
+  left:-1px;
+  right:-1px;
+  bottom:0;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+.cover-content{
+  position:relative;
+  z-index:4;
+
+  width:min(650px,100%);
+
+  text-align:center;
+}
+
+.cover-top{
+  font-size:8px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+
+.cover-names{
+  font:400 clamp(72px,11vw,120px)/.62
+  Italianno,cursive;
+
+  color:var(--ink);
+
+  text-shadow:
+    0 6px 25px rgba(155,119,45,.12);
+}
+
+.cover-amp{
+  font:400 39px
+  "Cormorant Garamond",serif;
+
+  color:var(--gold);
+
+  margin:36px 0;
+}
+
+.cover-invite{
+  margin:34px auto 28px;
+
+  max-width:440px;
+
+  font:400 19px/1.7
+  "Cormorant Garamond",serif;
+
+  text-transform:uppercase;
+  letter-spacing:2.2px;
+
+  color:#4d4842;
+}
+
+.cover-date-row{
+  display:grid;
+
+  grid-template-columns:
+    1fr 90px 1fr;
+
+  align-items:center;
+
+  gap:15px;
+
+  max-width:560px;
+
+  margin:34px auto 0;
+}
+
+.date-side{
+  border-top:1px solid rgba(168,137,69,.75);
+  border-bottom:1px solid rgba(168,137,69,.75);
+
+  padding:14px 0;
+
+  font-size:8px;
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  color:#4c4740;
+}
+
+.date-center{
+  border-top:1px solid rgba(168,137,69,.75);
+  border-bottom:1px solid rgba(168,137,69,.75);
+
+  padding:8px 0;
+
+  background:
+    rgba(244,235,216,.4);
+}
+
+.date-center b{
+  display:block;
+
+  font:400 38px
+  "Cormorant Garamond",serif;
+
+  line-height:.9;
+
+  margin:7px 0;
+}
+
+.date-center span{
+  font-size:7px;
+  letter-spacing:2px;
+}
+
+.cover-place{
+  margin-top:26px;
+
+  font-family:
+    "Cormorant Garamond",serif;
+
+  font-size:17px;
+
+  letter-spacing:1px;
+
+  color:var(--muted);
+}
+
+.cover-reception{
+  margin-top:30px;
+
+  font:400 34px
+  Italianno,cursive;
+
+  color:#776b58;
+}
+
+/* =========================================
+   PHOTO PAGE
+========================================= */
+
+.photo-page{
+  min-height:100svh;
+
+  padding:110px 20px;
+
+  background:
+
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(210,196,166,.3),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(190,182,154,.25),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,.45),
+      transparent 45%
+    ),
+
+    #f2e3cc;
+}
+
+.photo-layout{
+  width:min(1030px,100%);
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr;
+
+  align-items:center;
+
+  gap:45px;
+}
+
+.photo-copy{
+  text-align:center;
+  order:2;
+}
+
+.photo-script{
+  font:400 76px/.7
+  Italianno,cursive;
+
+  color:#8f856d;
+}
+
+.photo-copy h2{
+  font:400 clamp(55px,7vw,88px)/.84
+  "Cormorant Garamond",serif;
+
+  color:var(--ink);
+
+  margin:30px 0;
+}
+
+.photo-copy p{
+  font:400 25px/1.75
+  "Cormorant Garamond",serif;
+
+  color:#6b5e60;
+
+  max-width:560px;
+  margin:auto;
+}
+
+.photo-rule{
+  width:90px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+
+  margin:32px auto;
+}
+
+.couple-frame{
+  position:relative;
+
+  width:min(650px,94%);
+
+  margin:auto;
+
+  padding:16px;
+
+  background:#fffaf0;
+
+  box-shadow:
+    0 24px 65px rgba(77,55,51,.18),
+    0 0 50px rgba(155,119,45,.1);
+
+  order:1;
+}
+
+.couple-frame:before{
+  content:"";
+
+  position:absolute;
+
+  inset:-9px;
+
+  border:1px solid var(--gold);
+
+  box-shadow:
+    0 0 25px rgba(155,119,45,.1);
+}
+
+.couple-frame:after{
+  content:"";
+
+  position:absolute;
+
+  inset:4px;
+
+  border:1px solid rgba(168,137,69,.3);
+}
+
+.couple-frame img{
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  max-height:760px;
+
+  object-fit:contain;
+
+  position:relative;
+  z-index:2;
+
+  border:5px solid #fffaf1;
+}
+
+/* =========================================
+   INVITATION
+========================================= */
+
+.invitation{
+  background:
+
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(205,188,157,.3),
+      transparent 22%
+    ),
+
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(150,161,128,.16),
+      transparent 20%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #ead7b8,
+      #f8eddb
+    );
+}
+
+.invitation-card{
+  width:min(900px,100%);
+
+  margin:auto;
+
+  padding:100px 55px;
+
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,.75),
+      transparent 60%
+    ),
+
+    rgba(255,250,241,.84);
+
+  border:1px solid var(--gold);
+
+  box-shadow:
+    0 25px 80px rgba(82,61,56,.14),
+    0 0 60px rgba(155,119,45,.08);
+}
+
+.invitation-card:before{
+  content:"";
+
+  position:absolute;
+
+  inset:12px;
+
+  border:1px solid rgba(168,137,69,.28);
+}
+
+.invitation-text{
+  position:relative;
+
+  text-align:center;
+
+  font:400 28px/1.8
+  "Cormorant Garamond",serif;
+
+  color:#65595c;
+}
+
+.invitation-small{
+  position:relative;
+
+  text-align:center;
+
+  margin-top:35px;
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-size:8px;
+
+  color:var(--gold);
+}
+
+/* =========================================
+   STORY
+========================================= */
+
+.story{
+  background:
+
+    radial-gradient(
+      ellipse at 90% 20%,
+      rgba(211,198,171,.3),
+      transparent 23%
+    ),
+
+    radial-gradient(
+      ellipse at 10% 90%,
+      rgba(148,157,122,.12),
+      transparent 22%
+    ),
+
+    #f3e7d2;
+}
+
+.story-grid{
+  width:min(1030px,100%);
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:75px;
+
+  align-items:center;
+}
+
+.story-photo{
+  position:relative;
+
+  padding:14px;
+
+  background:#fffaf1;
+
+  box-shadow:
+    0 25px 70px rgba(82,61,56,.16);
+}
+
+.story-photo:before{
+  content:"";
+
+  position:absolute;
+
+  inset:-8px;
+
+  border:1px solid var(--gold);
+}
+
+.story-photo img{
+  width:100%;
+  display:block;
+
+  position:relative;
+  z-index:2;
+}
+
+.story-copy{
+  text-align:left;
+}
+
+.story-copy .script{
+  font:400 74px
+  Italianno,cursive;
+
+  color:#8f856d;
+}
+
+.story-copy h3{
+  font:400 58px/.92
+  "Cormorant Garamond",serif;
+
+  margin:28px 0;
+}
+
+.story-copy p{
+  font:400 24px/1.75
+  "Cormorant Garamond",serif;
+
+  color:#6c6062;
+
+  max-width:560px;
+}
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events{
+  background:
+
+    radial-gradient(
+      ellipse at 20% 15%,
+      rgba(210,190,150,.3),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      ellipse at 85% 85%,
+      rgba(148,157,122,.18),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #e8d6b6,
+      #f8eddb
+    );
+}
+
+.event-intro{
+  width:min(700px,100%);
+
+  margin:auto;
+
+  text-align:center;
+
+  font:400 26px/1.7
+  "Cormorant Garamond",serif;
+
+  color:#6d6161;
+}
+
+.events-grid{
+  width:min(1000px,100%);
+
+  margin:70px auto 0;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:35px;
+}
+
+.event{
+  position:relative;
+
+  padding:65px 35px 50px;
+
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255,255,255,.8),
+      transparent 55%
+    ),
+
+    rgba(255,251,241,.9);
+
+  border:1px solid rgba(168,137,69,.8);
+
+  box-shadow:
+    0 25px 70px rgba(82,61,56,.12),
+    0 0 40px rgba(155,119,45,.06);
+}
+
+.event:before{
+  content:"";
+
+  position:absolute;
+
+  inset:11px;
+
+  border:1px solid rgba(168,137,69,.25);
+}
+
+.event-number{
+  font-family:
+    "Cormorant Garamond",serif;
+
+  font-size:20px;
+
+  letter-spacing:4px;
+
+  color:var(--gold);
+}
+
+.event-kicker{
+  margin-top:8px;
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-size:8px;
+
+  color:var(--gold);
+}
+
+.event-title{
+  margin:16px 0;
+
+  font:400 55px/.9
+  "Cormorant Garamond",serif;
+
+  color:#302c28;
+}
+
+.event-date{
+  font:400 28px
+  "Cormorant Garamond",serif;
+}
+
+.event-place{
+  margin-top:15px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.9;
+}
+
+.location{
+  display:inline-block;
+
+  margin-top:25px;
+
+  padding:13px 26px;
+
+  border:1px solid var(--gold);
+
+  background:
+    rgba(238,227,207,.4);
+
+  font-size:8px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  transition:.3s;
+
+  position:relative;
+  z-index:2;
+}
+
+.location:hover{
+  background:var(--gold);
+  color:#fff;
+}
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-wrap{
+  width:min(850px,100%);
+
+  margin:90px auto 0;
+
+  text-align:center;
+}
+
+.countdown-title{
+  font:400 48px
+  "Cormorant Garamond",serif;
+}
+
+.countdown{
+  margin-top:28px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+
+  background:
+    rgba(255,250,240,.3);
+}
+
+.count-box{
+  padding:25px 10px;
+
+  border-right:
+    1px solid rgba(168,137,69,.25);
+}
+
+.count-box:last-child{
+  border-right:0;
+}
+
+.count-number{
+  display:block;
+
+  font:400 56px
+  "Cormorant Garamond",serif;
+
+  color:#705d45;
+}
+
+.count-label{
+  font-size:7px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  color:var(--muted);
+}
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final{
+  min-height:650px;
+
+  text-align:center;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255,255,255,.75),
+      transparent 38%
+    ),
+
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(210,182,107,.22),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #e6d2ad,
+      #f7ead7
+    );
+}
+
+.final-message{
+  width:min(700px,100%);
+
+  margin:auto;
+
+  font:400 27px/1.75
+  "Cormorant Garamond",serif;
+
+  color:#6b5f61;
+}
+
+.final-names{
+  margin-top:45px;
+
+  font:400 clamp(78px,12vw,130px)/.65
+  Italianno,cursive;
+
+  color:#7d735f;
+}
+
+.final-date{
+  margin-top:35px;
+
+  color:var(--gold);
+
+  font-size:8px;
+
+  letter-spacing:5px;
+
+  text-transform:uppercase;
+}
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal{
+  opacity:0;
+
+  transform:translateY(28px);
+
+  transition:1s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:760px){
+
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  .section{
+    padding:
+      85px
+      13px;
+  }
+
+  .frame{
+    inset:8px;
+  }
+
+  .floral{
+    transform:scale(.58)!important;
+  }
+
+  .floral.tl{
+    left:-85px;
+    top:-45px;
+  }
+
+  .floral.tr{
+    right:-85px;
+    top:-45px;
+  }
+
+  .floral.bl{
+    left:-85px;
+    bottom:-70px;
+  }
+
+  .floral.br{
+    right:-85px;
+    bottom:-70px;
+  }
+
+  /* OPENING */
+
+  .open-card{
+    width:92vw;
+    min-height:88vh;
+    padding:30px 18px;
+  }
+
+  .open-card:before{
+    inset:10px;
+  }
+
+  .open-card:after{
+    inset:20px;
+  }
+
+  .open-kicker{
+    font-size:7px;
+    letter-spacing:4px;
+  }
+
+  .open-name{
+    font-size:clamp(65px,19vw,100px);
+  }
+
+  .open-btn{
+    padding:15px 22px;
+    font-size:7px;
+    letter-spacing:3px;
+  }
+
+  /* COVER */
+
+  .cover{
+    min-height:100svh;
+    padding:55px 10px 70px;
+  }
+
+  .cover-card{
+    width:96%;
+    min-height:88svh;
+
+    padding:
+      85px
+      18px
+      75px;
+  }
+
+  .cover-card:before{
+    inset:10px;
+  }
+
+  .cover-card:after{
+    inset:21px;
+  }
+
+  .arch{
+    left:5%;
+    right:5%;
+    top:5%;
+    bottom:5%;
+  }
+
+  .cover-top{
+    font-size:7px;
+    letter-spacing:3px;
+  }
+
+  .cover-names{
+    font-size:
+      clamp(
+        58px,
+        18vw,
+        92px
+      );
+  }
+
+  .cover-amp{
+    font-size:32px;
+    margin:28px 0;
+  }
+
+  .cover-invite{
+    font-size:16px;
+    line-height:1.7;
+    letter-spacing:1.5px;
+    margin-top:30px;
+  }
+
+  .cover-date-row{
+    grid-template-columns:
+      1fr
+      70px
+      1fr;
+
+    gap:6px;
+  }
+
+  .date-side{
+    font-size:7px;
+    letter-spacing:1px;
+  }
+
+  .date-center b{
+    font-size:29px;
+  }
+
+  .date-center span{
+    font-size:6px;
+  }
+
+  .cover-place{
+    font-size:15px;
+  }
+
+  .cover-reception{
+    font-size:30px;
+  }
+
+  /* PHOTO */
+
+  .photo-page{
+    padding-top:90px;
+  }
+
+  .photo-layout{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .photo-copy{
+    order:2;
+  }
+
+  .couple-frame{
+    order:1;
+    width:92%;
+  }
+
+  .photo-script{
+    font-size:58px;
+  }
+
+  .photo-copy h2{
+    font-size:53px;
+    line-height:.9;
+  }
+
+  .photo-copy p{
+    font-size:21px;
+    padding:0 12px;
+  }
+
+  /* INVITATION */
+
+  .invitation-card{
+    padding:75px 22px;
+  }
+
+  .invitation-text{
+    font-size:22px;
+  }
+
+  .invitation-small{
+    font-size:7px;
+    letter-spacing:2.5px;
+    line-height:1.7;
+  }
+
+  /* STORY */
+
+  .story-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .story-copy{
+    text-align:center;
+  }
+
+  .story-copy .script{
+    font-size:58px;
+  }
+
+  .story-copy h3{
+    font-size:48px;
+  }
+
+  .story-copy p{
+    font-size:21px;
+    padding:0 10px;
+  }
+
+  /* EVENTS */
+
+  .events-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .event{
+    padding:
+      55px
+      22px
+      45px;
+  }
+
+  .event-title{
+    font-size:48px;
+  }
+
+  .event-date{
+    font-size:25px;
+  }
+
+  .event-place{
+    font-size:9px;
+  }
+
+  /* COUNTDOWN */
+
+  .countdown-wrap{
+    margin-top:65px;
+  }
+
+  .countdown-title{
+    font-size:40px;
+  }
+
+  .countdown{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .count-box{
+    border-right:0;
+    border-bottom:
+      1px solid rgba(168,137,69,.25);
+  }
+
+  .count-number{
+    font-size:48px;
+  }
+
+  /* FINAL */
+
+  .final{
+    min-height:600px;
+  }
+
+  .final-message{
+    font-size:22px;
+    padding:0 12px;
+  }
+
+  .final-names{
+    font-size:
+      clamp(
+        65px,
+        18vw,
+        100px
+      );
+  }
+
+}
+
+/* very small phones */
+
+@media(max-width:380px){
+
+  .cover-names{
+    font-size:57px;
+  }
+
+  .cover-invite{
+    font-size:14px;
+  }
+
+  .date-center{
+    width:68px;
+  }
+
+  .photo-copy h2{
+    font-size:46px;
+  }
+
+  .event-title{
+    font-size:43px;
+  }
+
+}
+
+</style>
+</head>
+
+<body class="locked">
+
+<!-- =========================================
+     OPENING
+========================================= -->
+
+<div class="opening" id="opening">
+
+  <div class="open-card">
+
+    <div class="floral tl">
+      <span class="stem"></span>
+      <span class="flower f1"></span>
+      <span class="flower f2"></span>
+      <span class="flower f3"></span>
+      <span class="leaf l1"></span>
+      <span class="leaf l2"></span>
+    </div>
+
+    <div class="floral br">
+      <span class="stem"></span>
+      <span class="flower f1"></span>
+      <span class="flower f2"></span>
+      <span class="flower f3"></span>
+      <span class="leaf l1"></span>
+      <span class="leaf l2"></span>
+    </div>
+
+    <div class="open-content">
+
+      <div class="open-kicker">
+        A Beautiful Celebration
+      </div>
+
+      <div class="open-name">
+        Our Wedding
+      </div>
+
+
+      <button
+        class="open-btn"
+        id="openBtn">
+        Open The Invitation
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================
+     PAGE 1 — COVER
+========================================= -->
+
+<section class="section cover">
+
+  <div class="frame"></div>
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="flower f4"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+    <span class="leaf l3"></span>
+    <span class="baby-bloom b1"></span>
+  </div>
+
+  <div class="floral tr">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="flower f4"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+    <span class="leaf l3"></span>
+    <span class="baby-bloom b1"></span>
+  </div>
+
+  <div class="floral bl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="flower f4"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+    <span class="leaf l3"></span>
+    <span class="baby-bloom b1"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="flower f4"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+    <span class="leaf l3"></span>
+    <span class="baby-bloom b1"></span>
+  </div>
+
+
+  <div class="inner reveal">
+
+    <div class="cover-card">
+
+      <div class="arch"></div>
+
+      <div class="cover-content">
+
+        <div class="cover-top">
+          Together With Their Families
+        </div>
+
+        <div class="cover-names">
+          Mennatallah
+        </div>
+
+        <div class="cover-amp">
+          &amp;
+        </div>
+
+        <div class="cover-names">
+          Ahmed
+        </div>
+
+        <div class="cover-invite">
+          Request the pleasure of your company<br>
+          at their wedding celebration
+        </div>
+
+        <div class="cover-date-row">
+
+          <div class="date-side">
+            Friday
+          </div>
+
+          <div class="date-center">
+            <span>AUGUST</span>
+            <b>21</b>
+            <span>2026</span>
+          </div>
+
+          <div class="date-side">
+            7:00 PM
+          </div>
+
+        </div>
+
+        <div class="cover-place">
+          Fourment Rio Hall · Talkha
+        </div>
+
+        <div class="cover-reception">
+          Reception
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 2 — COUPLE PHOTO
+========================================= -->
+
+<section class="section photo-page">
+
+  <div class="frame"></div>
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="inner">
+
+    <div class="photo-layout reveal">
+
+      <div class="photo-copy">
+
+        <div class="photo-script">
+          A moment to remember
+        </div>
+
+        <h2>
+          Two hearts,<br>
+          one beautiful day.
+        </h2>
+
+        <div class="photo-rule"></div>
+
+        <p>
+          A celebration of love, family,
+          and the beginning of a new chapter.
+        </p>
+
+      </div>
+
+      <div class="couple-frame">
+
+        <img
+          src="couple.jfif"
+          alt="Mennatallah and Ahmed">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 3 — INVITATION
+========================================= -->
+
+<section class="section invitation">
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+
+  <div class="inner reveal">
+
+    <div class="kicker">
+      A Day To Remember
+    </div>
+
+    <div class="title">
+      With Love
+    </div>
+
+    <div class="ornament">
+      <span></span>
+      <i></i>
+      <span></span>
+    </div>
+
+    <div class="invitation-card">
+
+      <div class="invitation-text">
+
+        Together with their families,<br><br>
+
+        request the pleasure of your company<br>
+
+        as they celebrate their wedding day.
+
+      </div>
+
+      <div class="invitation-small">
+
+        Your presence will make the celebration complete
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 4 — CHILDHOOD MEMORY
+========================================= -->
+
+<section class="section story">
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+
+  <div class="inner">
+
+    <div class="kicker reveal">
+      Before They Knew
+    </div>
+
+    <div class="title reveal">
+      Little Moments
+    </div>
+
+    <div class="ornament reveal">
+      <span></span>
+      <i></i>
+      <span></span>
+    </div>
+
+
+    <div class="story-grid reveal">
+
+      <div class="story-photo">
+
+        <img
+          src="childhood.jfif"
+          alt="A cherished memory">
+
+      </div>
+
+      <div class="story-copy">
+
+        <div class="script">
+          Long before they met...
+        </div>
+
+        <h3>
+          Two little lives,<br>
+          years apart.
+        </h3>
+
+        <p>
+          These are the little ones they once were —
+          growing up in their own worlds,
+          never knowing that one day their paths
+          would meet and become one story.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     EVENTS
+========================================= -->
+
+<section class="section events">
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+
+  <div class="inner">
+
+    <div class="kicker reveal">
+      The Celebrations
+    </div>
+
+    <div class="title reveal">
+      Our Wedding Events
+    </div>
+
+    <div class="ornament reveal">
+      <span></span>
+      <i></i>
+      <span></span>
+    </div>
+
+    <div class="event-intro reveal">
+
+      Two beautiful celebrations
+      leading to one unforgettable day.
+
+    </div>
+
+
+    <div class="events-grid reveal">
+
+      <!-- HENNA -->
+
+      <article class="event">
+
+        <div class="event-number">
+          01
+        </div>
+
+        <div class="event-kicker">
+          Henna Celebration
+        </div>
+
+        <div class="event-title">
+          The Henna Night
+        </div>
+
+        <div class="event-date">
+          19 August 2026
+        </div>
+
+        <div class="event-place">
+
+          Agricultural Street<br>
+          In front of Al Orouba School
+
+        </div>
+
+        <a
+          class="location"
+          href="https://www.google.com/maps/search/?api=1&query=شارع+الزراعية+أمام+مدرسة+العروبة"
+          target="_blank"
+          rel="noopener">
+
+          View Location
+
+        </a>
+
+      </article>
+
+
+      <!-- WEDDING -->
+
+      <article class="event">
+
+        <div class="event-number">
+          02
+        </div>
+
+        <div class="event-kicker">
+          Wedding Reception
+        </div>
+
+        <div class="event-title">
+          The Wedding
+        </div>
+
+        <div class="event-date">
+          21 August 2026
+        </div>
+
+        <div class="event-place">
+
+          Fourment Rio Hall<br>
+          Talkha
+
+        </div>
+
+        <a
+          class="location"
+          href="https://www.google.com/maps/search/?api=1&query=فورمنت+ريو+طلخا"
+          target="_blank"
+          rel="noopener">
+
+          View Location
+
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown-wrap reveal">
+
+      <div class="countdown-title">
+        Counting Down To Our Day
+      </div>
+
+      <div class="countdown">
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="days">
+            00
+          </span>
+
+          <span class="count-label">
+            Days
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="hours">
+            00
+          </span>
+
+          <span class="count-label">
+            Hours
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="minutes">
+            00
+          </span>
+
+          <span class="count-label">
+            Minutes
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="seconds">
+            00
+          </span>
+
+          <span class="count-label">
+            Seconds
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FINAL
+========================================= -->
+
+<section class="section final">
+
+  <div class="floral tl">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+  <div class="floral br">
+    <span class="stem"></span>
+    <span class="flower f1"></span>
+    <span class="flower f2"></span>
+    <span class="flower f3"></span>
+    <span class="leaf l1"></span>
+    <span class="leaf l2"></span>
+  </div>
+
+
+  <div class="inner reveal">
+
+    <div class="kicker">
+      With Love
+    </div>
+
+    <div class="title">
+      Thank You
+    </div>
+
+    <div class="ornament">
+
+      <span></span>
+      <i></i>
+      <span></span>
+
+    </div>
+
+
+    <div class="final-message">
+
+      Thank you for being part of this
+      beautiful celebration.<br>
+
+      Your presence, love, and warm wishes
+      mean so much to us.
+
+    </div>
+
+
+    <div class="final-names">
+      Mennatallah &amp; Ahmed
+    </div>
+
+
+    <div class="final-date">
+      21 August 2026
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* OPEN INVITATION */
+
+const opening =
+document.getElementById("opening");
+
+const openBtn =
+document.getElementById("openBtn");
+
+openBtn.addEventListener("click",()=>{
+
+  opening.classList.add("hide");
+
+  document.body.classList.remove("locked");
+
+});
+
+
+/* COUNTDOWN */
+
+const weddingDate =
+new Date(
+  "2026-08-21T19:00:00+03:00"
+).getTime();
+
+
+function updateCountdown(){
+
+  const now = Date.now();
+
+  const distance =
+  weddingDate - now;
+
+
+  if(distance <= 0){
+
+    document.getElementById("days").textContent="00";
+    document.getElementById("hours").textContent="00";
+    document.getElementById("minutes").textContent="00";
+    document.getElementById("seconds").textContent="00";
+
+    return;
+  }
+
+
+  const days =
+  Math.floor(
+    distance / 86400000
+  );
+
+  const hours =
+  Math.floor(
+    (distance % 86400000) /
+    3600000
+  );
+
+  const minutes =
+  Math.floor(
+    (distance % 3600000) /
+    60000
+  );
+
+  const seconds =
+  Math.floor(
+    (distance % 60000) /
+    1000
+  );
+
+
+  document.getElementById("days")
+  .textContent =
+  String(days).padStart(2,"0");
+
+
+  document.getElementById("hours")
+  .textContent =
+  String(hours).padStart(2,"0");
+
+
+  document.getElementById("minutes")
+  .textContent =
+  String(minutes).padStart(2,"0");
+
+
+  document.getElementById("seconds")
+  .textContent =
+  String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+/* SCROLL ANIMATION */
+
+const observer =
+new IntersectionObserver(
+  entries=>{
+
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("show");
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.12
+  }
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>{
+
+  observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
